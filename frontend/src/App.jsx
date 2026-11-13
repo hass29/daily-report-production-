@@ -212,7 +212,7 @@ export default function App() {
         <div className="tablewrap"><table><thead><tr><th>Time</th><th>Actor</th><th>Action</th><th>Details</th></tr></thead><tbody>{auditRows.slice(0,300).map(a=><tr key={a._id}><td>{new Date(a.at).toLocaleString()}</td><td>{a.actor}</td><td>{a.action}</td><td>{a.details}</td></tr>)}</tbody></table></div>
       </section>}
 
-      <section className="panel"><h2>Export</h2><p className="muted">Print the currently visible reports and select “Save as PDF” in your browser's print dialog.</p><button onClick={()=>printReports(visibleReports())}>Print / Save visible reports as PDF</button><button className="secondary" onClick={exportReports}>Export visible reports as CSV</button></section>
+      <section className="panel"><h2>Export</h2><p className="muted">Print the currently visible reports and select “Save as PDF” in your browser's print dialog.</p><button onClick={()=>printReports(visibleReports)}>Print / Save visible reports as PDF</button><button className="secondary" onClick={exportReports}>Export visible reports as CSV</button></section>
     </main>
     <footer>Secure DPR · MERN stack · Server-side authentication and MongoDB persistence</footer>
   </>;
